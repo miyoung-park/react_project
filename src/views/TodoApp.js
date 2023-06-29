@@ -1,7 +1,10 @@
 import TodoList from "./TodoList";
 import {useState,useEffect} from "react";
+import createAxiosInstance from "../plugin/axios-instance";
 
 const TodoApp = () => {
+
+    const axiosInstance = createAxiosInstance();
 
     const [ todos, setTodos ] = useState(['react 공부']);
     const [ newTodo, setNewTodo ] = useState();
@@ -14,18 +17,12 @@ const TodoApp = () => {
         setTodos( [...todos, newTodo])
     }
 
+
+
     useEffect(() => {
-       console.log( "새로운 내용이 랜더링 됐네요." , todos );
+        console.log( "새로운 내용이 랜더링 됐네요." , todos );
     }, [todos] );
 
-
-    useEffect(() => {
-
-    })
-
-    const fetchInitialData = async () => {
-        const response = await fetch("http://localhost:9094/")
-    }
 
     return (
         <div>
