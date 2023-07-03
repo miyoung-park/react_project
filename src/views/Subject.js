@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-const Subject = (props) => {
-
-    const propTitle = props.title;
-    const propSub = props.sub;
-
+const Subject = ({
+    propTitle = "",
+    propSub= ""
+                 }) => {
     const [ title, setTitle ] = useState(propTitle);
     const [ sub, setSub ] = useState(propSub);
     const [ count , setCount ] = useState(0);
