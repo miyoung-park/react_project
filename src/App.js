@@ -18,23 +18,20 @@ import UseRefHooks from "./views/hooks/UseRefHooks";
 
 
 
-
-
-
 function App() {
     return (
         <div>
-            <Subject title="WEB" sub="world wide web !"/>
-            <Navigation />
-            <Content />
+            {/*<Subject title="WEB" sub="world wide web !"/>*/}
+            {/*<Navigation />*/}
+            {/*<Content />*/}
 
             <br/><br/>
             <nav>
-                <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/counter">Counter</Link>
-                | <Link to="/input/first">InputFirst</Link> | <Link to="/input/second">InputSecond</Link> | <Link to="/list">UserList</Link>
-                | <Link to="/change">Change</Link> | <Link to="/todo">Todo</Link>| <Link to="/login">UserLogin</Link>
-                | <Link to="/useMemoHooks">useMemoHooks</Link> | <Link to="/useCallbackHooks">useCallbackHooks</Link>
-                | <Link to="/useRefHooks">UseRefHooks</Link>
+                <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/counter">Counter</Link><br/>
+                <Link to="/input/first">InputFirst</Link> | <Link to="/input/second">InputSecond</Link> | <Link to="/list">UserList</Link><br/>
+                <Link to="/change">Change</Link> | <Link to="/todo">Todo</Link>| <Link to="/login">UserLogin</Link><br/>
+                <Link to="/useMemoHooks">useMemoHooks</Link> | <Link to="/useCallbackHooks">useCallbackHooks</Link><br/>
+                <Link to="/useRefHooks">useRefHooks</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<Home/>}/>

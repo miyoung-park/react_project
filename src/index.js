@@ -8,11 +8,11 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root')); // <div id="root"> 를 가지고 옴
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode> // -> 렌더링을 두번 하게 됨
       <BrowserRouter>
           <App/>
       </BrowserRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
