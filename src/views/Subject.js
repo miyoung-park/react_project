@@ -8,6 +8,10 @@ const Subject = ({
     const [ title, setTitle ] = useState(propTitle);
     const [ sub, setSub ] = useState(propSub);
     const [ count , setCount ] = useState(0);
+    const [ user, setUser ] = useState({
+        uid : "user1",
+        passwd: 12345,
+    });
 
     useEffect(() => {
         console.log( "value changed... ");
@@ -19,13 +23,25 @@ const Subject = ({
         setCount( count + 1 );
     }
 
+    const onClickUser = () => {
+        setUser((prev) => ({
+            ...user,
+            uid : "anonymous"
+        }))
+    }
+
     return (
-        <header>
-            <h1>{ title }</h1>
-            { sub }
-            <br/>
-            <button onClick={ onClickTitle }>CLICK</button>
-        </header>
+        <>
+            <header>
+                <h1>{ title }</h1>
+                <h2>{ sub }</h2>
+                <p>{ user.uid }</p>
+                <br/>
+                <button onClick={ onClickTitle }>CLICK</button>
+                <button onClick={ onClickUser }>CLICK</button>
+                {/*<button onClick={ onClickUser("uid", "test2", "123456789") }>CLICK</button>*/}
+            </header>
+        </>
     )
 }
 
